@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% raw %}
+<div ng-app="imgApp" ng-controller="imgCtrl">
+    <div id="thumbnail">
+        <img ng-repeat="thumbnail in images" src="{{ thumbnail }}" id="col-md-4, img-thumbnail" />
+    </div>
+</div>
+{% endraw %}
+{% endblock %}
+
+{% block js %}
+<script src="/static/js/angular.min.js"></script>
+<script src="/static/js/app.js"></script>
+{% endblock %}
